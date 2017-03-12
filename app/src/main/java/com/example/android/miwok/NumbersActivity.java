@@ -14,7 +14,7 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
-        ArrayList<String> words=new ArrayList<String>();
+        ArrayList<String> words = new ArrayList<String>();
         words.add("one");
         words.add("two");
         words.add("three");
@@ -25,13 +25,20 @@ public class NumbersActivity extends AppCompatActivity {
         words.add("eight");
         words.add("nine");
         words.add("ten");
-        int index=0;
-        while(index<words.size()) {
-            LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+
+        LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
+        int index = 0;
+       /* while(index<words.size()) {
+
             TextView wordView=new TextView(this);
             wordView.setText(words.get(index));
             rootView.addView(wordView);
             index=index+1;
+        }*/
+        for (index = 0; index < words.size(); index++) {
+            TextView wordView = new TextView(this);
+            wordView.setText(words.get(index));
+            rootView.addView(wordView);
         }
     }
 }
