@@ -1,19 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
+    android:id="@+id/list1"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:id="@+id/list1">
+    android:orientation="horizontal"
+    android:padding="16dp">
 
-    <TextView
+    <ImageView
+        android:id="@+id/image_icon"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="New Text"
-        android:id="@+id/textView" />
+        android:paddingRight="16dp"
+        android:src="@mipmap/ic_launcher" />
 
-    <TextView
+    <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="New Text"
-        android:id="@+id/textView2" />
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/miwok_translation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="New Text" />
+
+        <TextView
+            android:id="@+id/default_translation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="New Text" />
+    </LinearLayout>
 </LinearLayout>
