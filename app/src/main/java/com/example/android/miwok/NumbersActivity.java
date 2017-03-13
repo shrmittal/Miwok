@@ -18,17 +18,19 @@ public class NumbersActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_numbers);
-        ArrayList<String> words = new ArrayList<String>();
-        words.add("one");
-        words.add("two");
-        words.add("three");
-        words.add("four");
-        words.add("five");
-        words.add("six");
-        words.add("seven");
-        words.add("eight");
-        words.add("nine");
-        words.add("ten");
+        ArrayList<Word> words = new ArrayList<Word>();
+
+       // words.add("one");
+        words.add(new Word("one","lutti"));
+        words.add(new Word("two","otiiko"));
+        words.add(new Word("three","tolookosu"));
+        words.add(new Word("four","oyissa"));
+        words.add(new Word("five","massokka"));
+        words.add(new Word("six","temmokka"));
+        words.add(new Word("seven","kenekaku"));
+        words.add(new Word("eight","kawinta"));
+        words.add(new Word("nine","wo'e"));
+        words.add(new Word("ten","na'aacha"));
 
        /* LinearLayout rootView = (LinearLayout) findViewById(R.id.rootView);
         int index = 0;*/
@@ -45,10 +47,10 @@ public class NumbersActivity extends AppCompatActivity {
             rootView.addView(wordView);
         }*/
 
-        ArrayAdapter<String> itemsAdapter=new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1,words);
-        /*ListView listView=(ListView)findViewById(R.id.list);
-        listView.setAdapter(itemsAdapter);*/
-        GridView gridView=(GridView)findViewById(R.id.list);
-        gridView.setAdapter(itemsAdapter);
+        ArrayAdapter<Word> itemsAdapter=new ArrayAdapter<Word>(this,R.layout.list_item,words);
+        ListView listView=(ListView)findViewById(R.id.list);
+        listView.setAdapter(itemsAdapter);
+        /*GridView gridView=(GridView)findViewById(R.id.list);
+        gridView.setAdapter(itemsAdapter);*/
     }
 }
