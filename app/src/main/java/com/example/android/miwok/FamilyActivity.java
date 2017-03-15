@@ -47,6 +47,7 @@ public class FamilyActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.word_list);
 
+
         mAudioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
 
 
